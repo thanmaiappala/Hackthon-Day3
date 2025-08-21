@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-violet-100 to-indigo-100 dark:from-slate-900 dark:via-slate-950 dark:to-indigo-950">
+  <div class="max-w-7xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">📅 Browse Events</h2>
+
+    <!-- Search -->
+    <div class="mb-4">
+      <input id="nameSearch" type="text" placeholder="🔍 Search by event name..." class="w-full border rounded-lg px-3 py-2">
+    </div>
+
+    <!-- Events Grid -->
+    <div id="eventGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center text-slate-500 mt-10">No events found. Add some first!</div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 hidden bg-black/60 flex items-center justify-center z-50">
+    <div class="bg-white dark:bg-slate-900 rounded-xl p-6 w-full max-w-lg shadow-xl relative">
+      <button id="closeModal" aria-label="Close modal" class="absolute top-3 right-3 text-lg">✖</button>
+      <h3 id="modalTitle" class="text-xl font-bold"></h3>
+      <p id="modalDate" class="text-sm text-slate-500"></p>
+      <p id="modalDesc" class="mt-3 text-slate-600 dark:text-slate-300"></p>
+      <img id="modalImage" class="mt-4 rounded-lg w-full object-cover max-h-56"/>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
