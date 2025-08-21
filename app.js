@@ -14,26 +14,6 @@ if (themeToggle) {
     themeToggle.textContent = html.classList.contains("dark") ? "☀" : "🌙";
   });
 }
-// const html = document.documentElement;
-//     const themeToggle = $('#themeToggle');
-//     const themeIcon = $('#themeIcon');
-
-//     const setTheme = (mode) => {
-//       if (mode === 'dark') html.classList.add('dark');
-//       else html.classList.remove('dark');
-//       localStorage.setItem(LS_THEME, mode);
-//       themeIcon.textContent = mode === 'dark' ? '🌞' : '🌙';
-//     };
-
-//     const initTheme = () => {
-//       const saved = localStorage.getItem(LS_THEME);
-//       if (saved) setTheme(saved);
-//       else setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-//     };
-
-//     themeToggle.addEventListener('click', () => {
-//       setTheme(html.classList.contains('dark') ? 'light' : 'dark');
-//     });
 
 // ADD / EDIT PAGE
 const form = document.getElementById("eventForm");
